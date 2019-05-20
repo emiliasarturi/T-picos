@@ -41,8 +41,8 @@ class messageController extends Controller
     public function store(Request $request)
     {
             $mensagens = array(
-                'titulo.required' => 'É obritória um título para a mensagem',
-                'texto.required' => 'É obrigatória uma descrição para a mensagem',
+                'titulo.required' => 'É obritório um título para a mensagem',
+                'texto.required' => 'É obrigatório uma descrição para a mensagem',
                 'autor.required' => 'É obrigatório um autor para a mensagem',
             );
 
@@ -102,8 +102,8 @@ class messageController extends Controller
     public function update(Request $request, $id)
     {
             $mensagem = array(
-                'titulo.required' => 'É obritória um título para a mensagem',
-                'texto.required' => 'É obrigatória uma descrição para a mensagem',
+                'titulo.required' => 'É obritório um título para a mensagem',
+                'texto.required' => 'É obrigatório uma descrição para a mensagem',
                 'autor.required' => 'É obrigatório um autor para a mensagem'
             );
 

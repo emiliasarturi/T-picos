@@ -8,4 +8,3 @@
 <hr>
 <p><a href="/atividades/{{$atividade->id}}/edit"><b>Editar</b></a></p>
 <hr>
-<p>2019 - Luiz Cassol | Tópicos Especiais | IFRS - Campus Ibirubá</p>

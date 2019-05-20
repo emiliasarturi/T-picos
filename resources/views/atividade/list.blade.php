@@ -1,12 +1,12 @@
 <h1>Lista de Atividades</h1>
 <hr>
 @foreach($atividades as $a)
-	<hr>
+	
 	<h3>{{\Carbon\Carbon::parse($a->scheduledto)->format('d/m/Y h:m')}}</h3>
 	<p><a href="/atividades/{{$a->id}}">{{$a->title}}</a></p>
 	<p>{{$a->description}}</p>
 	<br>
-	<hr>
+	
 @endforeach
 
 <!--Mensagem -->
@@ -31,5 +31,5 @@
 	<hr>
 @endif
 
-<p>2019 - Luiz Cassol | Tópicos Especiais | IFRS - Campus Ibirubá</p>
+
 <!-- \Carbon\Carbon::parse($a->scheduledto)->format('d/m/Y h:m')  -->

@@ -15,13 +15,13 @@ class messagesTableSeeder extends Seeder
         Messages::create([
             'titulo' => 'Mensagem de Teste 1',
             'texto' => 'Essa é apenas uma mensagem de teste para o seeder.',
-            'autor' => 'Amanda'
+            'autor' => 'Emilia'
         ]);
 
         Messages::create([
             'titulo' => 'Mensagem de Teste 2',
             'texto' => 'Essa é apenas uma mensagem de teste para o seeder.',
-            'autor' => 'Amanda'
+            'autor' => 'Emilia'
         ]);
     }
 }

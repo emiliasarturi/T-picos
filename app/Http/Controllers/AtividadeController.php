@@ -40,9 +40,9 @@ class AtividadeController extends Controller
     public function store(Request $request)
     {
         $messages = array (
-            'title.required' => 'É obrigatório atribuir um título para a atividade',
-            'description.required' => 'É obrigatório atribuir uma descrição para a atividade',
-            'scheduledto.required' => 'É obrigatório atribuir uma data/hora para a atividade',
+            'title.required' => 'É obrigatório dar um título para a atividade',
+            'description.required' => 'É obrigatório uma descrição para a atividade',
+            'scheduledto.required' => 'É obrigatório uma data/hora para a atividade',
         );
 
         $regras = array(
@@ -102,9 +102,9 @@ class AtividadeController extends Controller
     {
 
         $messages = array(
-            'title.required' => 'É obrigatório atribuir um título para a atividade',
-            'description.required' => 'É obrigatório atribuir uma descrição para a atividade',
-            'scheduledto.required' => 'É obrigatório atribuir uma data/hora para a atividade',
+            'title.required' => 'É obrigatório dar um título para a atividade',
+            'description.required' => 'É obrigatório uma descrição para a atividade',
+            'scheduledto.required' => 'É obrigatório uma data/hora para a atividade',
         );
 
         $regras = array(
@@ -127,6 +127,11 @@ class AtividadeController extends Controller
         $obj_atividade->scheduledto = $request['scheduledto'];
         $obj_atividade->save();
         return redirect('/atividades')->with('success', 'Atividade editada com sucesso!!');
+    }
+
+    public function delete($id){
+        $obj_Atividade = Atividade::find($id);
+        return view('atividade.delete', ['atividade' => $obj_Atividade]);
     }
 
     /**
