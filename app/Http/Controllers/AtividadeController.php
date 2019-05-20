@@ -134,14 +134,9 @@ class AtividadeController extends Controller
         return view('atividade.delete', ['atividade' => $obj_Atividade]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Atividade  $atividade
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Atividade $atividade)
-    {
-        //
+    public function destroy($id){
+        $obj_Atividade = Atividade::findOrFail($id);
+        $obj_Atividade->delete($id);
+        return redirect('/atividades')->with('sucess',"Atividade excluida com sucesso!");
     }
 }
